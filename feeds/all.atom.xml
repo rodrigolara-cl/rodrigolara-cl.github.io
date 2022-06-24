@@ -1,23 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ingeniería y Data Science</title><link href="https://rodrigolara-cl.github.io/" rel="alternate"></link><link href="https://rodrigolara-cl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rodrigolara-cl.github.io/</id><updated>2022-06-24T18:30:00-04:00</updated><entry><title>Tutorial Pelican con Github Places</title><link href="https://rodrigolara-cl.github.io/tutorial-pelican-github-pages.html" rel="alternate"></link><published>2022-06-24T18:30:00-04:00</published><updated>2022-06-24T18:30:00-04:00</updated><author><name>Rodrigo Lara</name></author><id>tag:rodrigolara-cl.github.io,2022-06-24:/tutorial-pelican-github-pages.html</id><summary type="html">&lt;p&gt;En este tutorial mostraré el workflow actualizado al 2022 para realizar páginas web en pelican y sincronizarlas con git hacia github.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Tutorial para realizar página web con Pelican en Github pages&lt;/h1&gt;
-&lt;p&gt;Hace años por allá el 2013 probé sitios web estáticos en github pages y intenté usar sin mucho éxito jekyll y pelican. En general la curiosidad no llega más lejos que la necesidad y si bien me ha tocado trabajar con sitios web en wordpress y ahora último prestashop debido a que son las tecnologías usadas en las páginas web de mis últimos dos trabajos, no son lo que necesito actualmente para crear mi página web personal. Utilicé Google Sites con éxito para un proyecto de baterías junto con un amigo, pero la selección fue restringida a que debía ser fácil de escribir contenido y configurar. Bueno ninguna de las opciones cumple con mis requisitos personales los cuales son:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Posibilidad de integración de jupyter notebooks&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Seguimiento de cambios con GitHub y uso de alojamiento gratuito de github pages&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Capacidad de personalizarlo en python a futuro&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Antes de volver a utilizar Pelican, vi tutoriales de Jekyll pero lamentablemente no logré instalar las librerías necesarias en OpenSuse que es el sistema que utilizo actualmente, por lo que volví al confiable python que tengo instalado gracias a Anaconda.
-Los tutoriales que encontré no me permitieron ejecutar todos los pasos como corresponde y perdí bastante tiempo tratando de entender por qué no lograba subir el sitio a github.&lt;/p&gt;
-&lt;p&gt;En este tutorial mostraré el procedimiento actualizado al 2022 para realizar páginas web en pelican y sincronizarlas con git hacia github.&lt;/p&gt;
-&lt;h2&gt;Creación de repositorios en GitHub&lt;/h2&gt;
-&lt;p&gt;Github Pages permite una sola página web personal con el formato &lt;a href="https://nombre.github.io"&gt;https://nombre.github.io&lt;/a&gt; pero no restringe la cantidad de las páginas de proyecto que se accederían &lt;a href="https://nombre.github.io/nombre-proyecto"&gt;https://nombre.github.io/nombre-proyecto&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;La mayoría de los tutoriales explican como realizarlo en las páginas de proyecto, y la documentación de pelican explica sólo la parte final de subir el sitio para ambos casos, por lo que existía un vacío y algunas incompatibilidades con el estado actual de github y los tutoriales.&lt;/p&gt;
-&lt;p&gt;El primer paso es crear dos repositorios en github, uno para alojar la página web, y otro para alojar el código de la página para realizar el seguimiento de cambios.&lt;/p&gt;
-&lt;p&gt;Al crear el repositorio para alojar la página web debemos colocar en el nombre del repositorio nombre-de-usuario.github.io, por ejemplo:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imagen 1" src="https://rodrigolara-cl.github.io/images/githubusuario.png"&gt;&lt;/p&gt;</content><category term="Blog"></category><category term="pelican"></category><category term="github"></category><category term="github-pages"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ingeniería y Data Science</title><link href="https://rodrigolara-cl.github.io/" rel="alternate"></link><link href="https://rodrigolara-cl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rodrigolara-cl.github.io/</id><updated>2022-06-24T19:39:50Z</updated></feed>
