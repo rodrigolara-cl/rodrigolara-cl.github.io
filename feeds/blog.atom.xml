@@ -15,19 +15,31 @@
 el principal problema que tuve durante este proceso fue que los tutoriales que encontré acerca de Pelican y Github Pages no me permitieron ejecutar todos los pasos como corresponde y perdí bastante tiempo tratando de entender por qué no lograba subir el sitio a Github.&lt;/p&gt;
 &lt;p&gt;En este tutorial mostraré el procedimiento actualizado al 2022 para realizar páginas web en Pelican y sincronizarlas con Git hacia Github. Existen algunos comandos que sólo funcionan con python instalado con anaconda (crear y activar entornos virtuales) y en linux (el comando make puede que no funcione en windows, en ese caso probar fab).&lt;/p&gt;
 &lt;h2&gt;Creación de repositorios en GitHub&lt;/h2&gt;
-&lt;p&gt;Github Pages permite una sola página web personal con el formato &lt;a href="https://nombre-usuario.github.io"&gt;https://nombre-usuario.github.io&lt;/a&gt; pero no restringe la cantidad de las páginas de proyecto que se accederían &lt;a href="https://nombre-usuario.github.io/nombre-proyecto"&gt;https://nombre-usuario.github.io/nombre-proyecto&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Github Pages permite una sola página web personal con el formato &lt;code&gt;https://nombre-usuario.github.io&lt;/code&gt; pero no restringe la cantidad de las páginas de proyecto que se accederían &lt;code&gt;https://nombre-usuario.github.io/nombre-proyecto&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;La mayoría de los tutoriales explican como realizarlo en las páginas de proyecto, y la documentación de Pelican explica sólo la parte final de subir el sitio para ambos casos, por lo que existía un vacío y algunas incompatibilidades con el estado actual de Github y los tutoriales.&lt;/p&gt;
 &lt;p&gt;El primer paso es crear dos repositorios en Github, uno para alojar la página web, y otro para alojar el código de la página para realizar el seguimiento de cambios.&lt;/p&gt;
 &lt;p&gt;Al crear el repositorio para alojar la página web debemos colocar en el nombre del repositorio &lt;code&gt;nombre-de-usuario.github.io&lt;/code&gt;, por ejemplo:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Imagen 1" src="https://rodrigolara-cl.github.io/images/githubusuario.png"&gt;&lt;/p&gt;
 &lt;p&gt;Recomiendo no crear un readme ni gitignore ni licencia ya que no los necesitamos para este repositorio.&lt;/p&gt;
 &lt;p&gt;A continuación creamos el repositorio para el seguimiento del código del sitio web. En este puedes colocar cualquier nombre del proyecto y colocar un readme también.
-Una vez realizado este repositorio el último paso es crear una llave de acceso personal en GitHub.
-- Ingresar a configuracion/settings del usuario (no del proyecto)
-- Al final de la lista de opciones se encuentra developer settings
-- Ingresar a personal access token y generar un nuevo token, luego seleccionar la duración del token(si eliges duración tendrás que crear un nuevo token periódicamente) y finalmente elegir el scope, en particular yo seleccioné todos los permisos para evitar problemas de acceso pero probablemente no sean necesario todos.
-- El token aparecerá una sola vez por lo que debes copiarlo y guardarlo.
-- Este token lo utilizaremos para autenticarnos al realizar el push del repositorio local hacia github y para subir la página web.&lt;/p&gt;
+Una vez realizado este repositorio el último paso es crear una llave de acceso personal en GitHub.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ingresar a configuracion/settings del usuario (no del proyecto)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Al final de la lista de opciones se encuentra developer settings&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ingresar a personal access token y generar un nuevo token, luego seleccionar la duración del token(si eliges duración tendrás que crear un nuevo token periódicamente) y finalmente elegir el scope, en particular yo seleccioné todos los permisos para evitar problemas de acceso pero probablemente no sean necesario todos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;El token aparecerá una sola vez por lo que debes copiarlo y guardarlo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Este token lo utilizaremos para autenticarnos al realizar el push del repositorio local hacia github y para subir la página web.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Configuración entorno virtual de Python e instalación de Pelican, Git y dependencias&lt;/h2&gt;
 &lt;p&gt;Para instalar Pelican en Anaconda Python se recomienda crear un entorno virtual.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;conda create -n nombre-entorno-virtual
@@ -124,7 +136,7 @@ Url:
 make serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Podemos visualizar la página en &lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt; en el navegador.&lt;/p&gt;
+&lt;p&gt;Podemos visualizar la página en `http://localhost:8000´ en el navegador.&lt;/p&gt;
 &lt;p&gt;Cuando esté listo para ser publicado utilizaremos el siguiente comando.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make publish
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;

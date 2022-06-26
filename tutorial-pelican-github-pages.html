@@ -54,19 +54,31 @@
 el principal problema que tuve durante este proceso fue que los tutoriales que encontré acerca de Pelican y Github Pages no me permitieron ejecutar todos los pasos como corresponde y perdí bastante tiempo tratando de entender por qué no lograba subir el sitio a Github.</p>
 <p>En este tutorial mostraré el procedimiento actualizado al 2022 para realizar páginas web en Pelican y sincronizarlas con Git hacia Github. Existen algunos comandos que sólo funcionan con python instalado con anaconda (crear y activar entornos virtuales) y en linux (el comando make puede que no funcione en windows, en ese caso probar fab).</p>
 <h2>Creación de repositorios en GitHub</h2>
-<p>Github Pages permite una sola página web personal con el formato <a href="https://nombre-usuario.github.io">https://nombre-usuario.github.io</a> pero no restringe la cantidad de las páginas de proyecto que se accederían <a href="https://nombre-usuario.github.io/nombre-proyecto">https://nombre-usuario.github.io/nombre-proyecto</a>.</p>
+<p>Github Pages permite una sola página web personal con el formato <code>https://nombre-usuario.github.io</code> pero no restringe la cantidad de las páginas de proyecto que se accederían <code>https://nombre-usuario.github.io/nombre-proyecto</code>.</p>
 <p>La mayoría de los tutoriales explican como realizarlo en las páginas de proyecto, y la documentación de Pelican explica sólo la parte final de subir el sitio para ambos casos, por lo que existía un vacío y algunas incompatibilidades con el estado actual de Github y los tutoriales.</p>
 <p>El primer paso es crear dos repositorios en Github, uno para alojar la página web, y otro para alojar el código de la página para realizar el seguimiento de cambios.</p>
 <p>Al crear el repositorio para alojar la página web debemos colocar en el nombre del repositorio <code>nombre-de-usuario.github.io</code>, por ejemplo:</p>
 <p><img alt="Imagen 1" src="https://rodrigolara-cl.github.io/images/githubusuario.png"></p>
 <p>Recomiendo no crear un readme ni gitignore ni licencia ya que no los necesitamos para este repositorio.</p>
 <p>A continuación creamos el repositorio para el seguimiento del código del sitio web. En este puedes colocar cualquier nombre del proyecto y colocar un readme también.
-Una vez realizado este repositorio el último paso es crear una llave de acceso personal en GitHub.
-- Ingresar a configuracion/settings del usuario (no del proyecto)
-- Al final de la lista de opciones se encuentra developer settings
-- Ingresar a personal access token y generar un nuevo token, luego seleccionar la duración del token(si eliges duración tendrás que crear un nuevo token periódicamente) y finalmente elegir el scope, en particular yo seleccioné todos los permisos para evitar problemas de acceso pero probablemente no sean necesario todos.
-- El token aparecerá una sola vez por lo que debes copiarlo y guardarlo.
-- Este token lo utilizaremos para autenticarnos al realizar el push del repositorio local hacia github y para subir la página web.</p>
+Una vez realizado este repositorio el último paso es crear una llave de acceso personal en GitHub.</p>
+<ul>
+<li>
+<p>Ingresar a configuracion/settings del usuario (no del proyecto)</p>
+</li>
+<li>
+<p>Al final de la lista de opciones se encuentra developer settings</p>
+</li>
+<li>
+<p>Ingresar a personal access token y generar un nuevo token, luego seleccionar la duración del token(si eliges duración tendrás que crear un nuevo token periódicamente) y finalmente elegir el scope, en particular yo seleccioné todos los permisos para evitar problemas de acceso pero probablemente no sean necesario todos.</p>
+</li>
+<li>
+<p>El token aparecerá una sola vez por lo que debes copiarlo y guardarlo.</p>
+</li>
+<li>
+<p>Este token lo utilizaremos para autenticarnos al realizar el push del repositorio local hacia github y para subir la página web.</p>
+</li>
+</ul>
 <h2>Configuración entorno virtual de Python e instalación de Pelican, Git y dependencias</h2>
 <p>Para instalar Pelican en Anaconda Python se recomienda crear un entorno virtual.</p>
 <div class="highlight"><pre><span></span><code>conda create -n nombre-entorno-virtual
@@ -163,7 +175,7 @@ Url:
 make serve
 </code></pre></div>
 
-<p>Podemos visualizar la página en <a href="http://localhost:8000">http://localhost:8000</a> en el navegador.</p>
+<p>Podemos visualizar la página en `http://localhost:8000´ en el navegador.</p>
 <p>Cuando esté listo para ser publicado utilizaremos el siguiente comando.</p>
 <div class="highlight"><pre><span></span><code>make publish
 </code></pre></div>
