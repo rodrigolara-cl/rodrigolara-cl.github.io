@@ -136,7 +136,7 @@ Url:
 make serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Podemos visualizar la página en ´http://localhost:8000´ en el navegador.&lt;/p&gt;
+&lt;p&gt;Podemos visualizar la página en &lt;code&gt;http://localhost:8000&lt;/code&gt; en el navegador.&lt;/p&gt;
 &lt;p&gt;Cuando esté listo para ser publicado utilizaremos el siguiente comando.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make publish
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
